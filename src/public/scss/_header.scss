@@ -1,0 +1,132 @@
+.header {
+    background-image: url('../img/bg-header.jpg');
+    background-color: #000;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: #000;
+        opacity: 0.65;
+        inset: 0;
+    }
+
+    &__contact--wrap {
+        border-bottom: 1px solid #ffffff1f;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__contact {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 23.24px;
+        padding: 17px 0;
+        position: relative;
+        z-index: 2;
+        &--location {
+            i {
+                margin-right: 12px;
+            }
+        }
+        &--address {
+            display: flex;
+            gap: 0 30px;
+        }
+        &--address__phone {
+            i {
+                margin-right: 12px;
+            }
+        }
+        &--address__mail {
+            i {
+                margin-right: 12px;
+            }
+        }
+    }
+
+    &__navbar {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+
+        &--logo {
+            width: 20%;
+            img {
+                width: 40px;
+                object-fit: cover;
+            }
+        }
+        &--menu {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0 30px;
+
+            &__item {
+                list-style: none;
+                height: 100%;
+            }
+            &__link {
+                text-decoration: none;
+                color: inherit;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                display: inline-flex;
+                align-items: center;
+                height: 100%;
+                padding: 20px 0;
+
+                i {
+                    font-size: 10px;
+                    margin-left: 8px;
+                }
+
+                span {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -4px;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: $primary-color;
+                        transition: all ease 0.25s;
+                    }
+                }
+
+                &:hover {
+                    span {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &__link.active {
+                span {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &--button {
+            margin-left: auto;
+        }
+    }
+}
