@@ -281,8 +281,7 @@ body {
   flex-direction: column;
   max-width: 680px;
   margin: 0 auto;
-  margin-top: 122px;
-  margin-bottom: 200px;
+  padding: 120px 0 40px 0;
 }
 .selectedMenu__tag {
   color: #dd5903;
@@ -327,6 +326,110 @@ body {
   font-size: 18px;
   line-height: 29.88px;
   text-align: center;
+}
+
+.typeMenu {
+  padding: 40px 0 80px 0;
+}
+.typeMenu.reverse .typeMenu--option {
+  flex-direction: row-reverse;
+}
+.typeMenu.reverse .typeMenu__poster {
+  flex-direction: row-reverse;
+}
+.typeMenu .typeMenu--option {
+  display: flex;
+  gap: 0 60px;
+}
+.typeMenu__poster {
+  display: flex;
+  gap: 0 20px;
+  align-items: center;
+}
+.typeMenu__poster--1 {
+  width: 45%;
+}
+.typeMenu__poster--1 img {
+  width: 100%;
+  object-fit: cover;
+}
+.typeMenu__poster--2 {
+  width: 55%;
+}
+.typeMenu__poster--2 img {
+  width: 100%;
+  object-fit: cover;
+}
+.typeMenu__food {
+  max-width: 494px;
+  width: 100%;
+  margin: auto 0;
+}
+.typeMenu__food--tag {
+  color: #dd5903;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  line-height: 39.84px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #dd5903;
+}
+.typeMenu__food--list {
+  margin-top: 42px;
+}
+.typeMenu__food--item {
+  list-style: none;
+  margin-bottom: 32px;
+}
+.typeMenu__food--item__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.typeMenu__food--item__title h2 {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32.4px;
+  padding-right: 15px;
+}
+.typeMenu__food--item__title .line {
+  width: 100%;
+  flex: 1;
+  position: relative;
+}
+.typeMenu__food--item__title .line::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 0;
+  top: 42%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.typeMenu__food--item__title .line::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 0;
+  bottom: 42%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.typeMenu__food--item__title span {
+  color: #ffffff;
+  display: table-cell;
+  font-size: 20px;
+  line-height: 33.2px;
+  padding: 0px 0px 0px 15px;
+}
+.typeMenu__food--item__desc {
+  font-family: "jost", sans-serif;
+  line-height: 25.6px;
+  margin: 5px 0px 0px;
+  opacity: 0.6;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */
