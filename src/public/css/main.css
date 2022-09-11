@@ -524,4 +524,113 @@ body {
   font-size: 16px;
 }
 
+.btn__navigation {
+  padding-bottom: 100px;
+}
+.btn__navigation--link {
+  display: flex;
+  justify-content: center;
+  gap: 0 20px;
+}
+.btn__navigation--link a:first-child {
+  background-color: #dd5903;
+  border-color: #dd5903;
+}
+.btn__navigation--link a:first-child:hover {
+  background-color: none;
+  color: #000;
+}
+.btn__navigation--link a:last-child {
+  color: #dd5903;
+  border-color: #dd5903;
+}
+.btn__navigation--link a:last-child:hover {
+  background-color: #dd5903;
+  color: #000;
+}
+
+.poster__food {
+  min-height: 500px;
+  background-image: url("../img/section-4.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info__food {
+  padding: 80px 0;
+  text-align: center;
+}
+.info__food--item {
+  position: relative;
+}
+.info__food--item__content {
+  max-width: 660px;
+  margin: 0 auto;
+}
+.info__food--item::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 0;
+  top: 50%;
+  width: 100px;
+  background-color: #fff;
+}
+.info__food--item::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  right: 0;
+  top: 50%;
+  width: 100px;
+  background-color: #fff;
+}
+.info__food--item__icon {
+  margin-bottom: 5px;
+}
+.info__food--item__icon i {
+  color: #dd5903;
+  font-size: 50px;
+}
+.info__food--item__desc p {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 42px;
+  text-align: center;
+  font-family: "Cormorant Garamond", sans-serif;
+}
+.info__food--item__infoAuthor {
+  margin-top: 20px;
+}
+.info__food--item__infoAuthor--name {
+  font-size: 18px;
+  line-height: 29.88px;
+}
+.info__food--item__infoAuthor--job {
+  font-size: 14px;
+  line-height: 23.24px;
+  opacity: 0.6;
+}
+.info__food--slide {
+  margin-top: 50px;
+  display: flex;
+  gap: 0 12px;
+  justify-content: center;
+  align-items: center;
+}
+.info__food--slide__btn {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.info__food--slide__btn.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
 /*# sourceMappingURL=main.css.map */
