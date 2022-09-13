@@ -87,4 +87,25 @@
             }
         }
     }
+
+    @media (max-width: 739px) {
+        padding: 40px 0;
+
+        &--item {
+            &::after {
+                display: none;
+            }
+
+            &::before {
+                display: none;
+            }
+
+            &__desc {
+                p {
+                    font-size: 20px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
 }

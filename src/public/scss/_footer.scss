@@ -60,6 +60,7 @@
         }
     }
 
+    // Tablet
     @media (max-width: 1023px) {
         &__box {
             display: flex;
@@ -67,6 +68,14 @@
             justify-content: center;
             align-items: center;
             gap: 30px 0;
+        }
+    }
+
+    // Mobile
+    @media (max-width: 739px) {
+        .footer__box--menu__list {
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
 }

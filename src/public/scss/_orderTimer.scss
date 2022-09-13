@@ -102,6 +102,7 @@
         }
     }
 
+    // Tablet
     @media (max-width: 1023px) {
         &__box {
             &:hover {
@@ -161,6 +162,28 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    // Mobile
+    @media (max-width: 739px) {
+        flex-direction: column;
+
+        &__box {
+            width: 100%;
+
+            &:hover {
+                width: 100%;
+            }
+
+            &::after {
+                display: block;
+                z-index: 1;
+            }
+
+            &--content {
+                z-index: 5;
             }
         }
     }

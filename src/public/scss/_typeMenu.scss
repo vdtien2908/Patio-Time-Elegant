@@ -1,5 +1,5 @@
 .typeMenu {
-    padding: 40px 0 80px 0;
+    padding: 40px 0;
 
     &.reverse {
         .typeMenu--option {
@@ -260,6 +260,26 @@
                     }
                 }
             }
+        }
+    }
+
+    // Mobile
+    @media (max-width: 739px) {
+        .typeMenu__food--item__title h2 {
+            font-size: 20px;
+            padding-right: 0;
+        }
+
+        .typeMenu__food--item--tag {
+            margin: 0;
+        }
+
+        .typeMenu__food--item__title span {
+            padding-left: 0;
+        }
+
+        .typeMenu__food--item__title .line {
+            display: none;
         }
     }
 }
