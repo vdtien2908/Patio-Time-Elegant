@@ -26,4 +26,16 @@
             }
         }
     }
+
+    @media (max-width: 739px) {
+        padding-bottom: 50px;
+        text-align: center;
+
+        &--link {
+            display: inline-flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px 0;
+        }
+    }
 }

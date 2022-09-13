@@ -15,6 +15,10 @@
     max-width: 1320px;
     margin: 0 auto;
     padding: 0 60px;
+
+    @media (max-width: 768px) {
+        padding: 0 calc(calc(100 / 32) * 2vw);
+    }
 }
 
 body {
