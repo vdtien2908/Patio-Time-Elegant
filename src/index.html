@@ -22,6 +22,7 @@
             <!-- Header -->
             <header class="header">
                 <!-- Contact -->
+                <div class="overlay" id="overlay"></div>
                 <div class="header__contact--wrap">
                     <div class="container-max">
                         <div class="header__contact">
@@ -52,7 +53,12 @@
                                 <img src="./public/img/P-logo.png" alt="" />
                             </a>
                         </div>
-                        <ul class="header__navbar--menu">
+                        <ul class="header__navbar--menu" id="box-menu">
+                            <li class="header__navbar--menu__logo">
+                                <a href="./index.html" class="">
+                                    <img src="./public/img/P-logo.png" alt="" />
+                                </a>
+                            </li>
                             <li class="header__navbar--menu__item">
                                 <a
                                     href="#!"
@@ -88,11 +94,20 @@
                                     <span> Latest news </span>
                                 </a>
                             </li>
+                            <li
+                                class="header__navbar--menu__close_btn"
+                                id="btn-close"
+                            >
+                                <i class="fa-solid fa-xmark"></i>
+                            </li>
                         </ul>
                         <div class="header__navbar--button">
                             <a href="#!" class="btn btn--secondary"
                                 >Find a table</a
                             >
+                        </div>
+                        <div class="header__navbar--toggle" id="toggle">
+                            <i class="fa-solid fa-bars"></i>
                         </div>
                     </div>
                 </div>
@@ -136,15 +151,21 @@
             <!-- Main -->
             <main>
                 <!-- Selected menus -->
-                <section class="selectedMenu">
-                    <p class="selectedMenu__tag">CHEF'S RECOMMENDED</p>
-                    <h2 class="selectedMenu__heading">Selected Menus</h2>
-                    <p class="selectedMenu__desc">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit. Aenean commodo ligula eget dolor. Aenean massa.
-                        Cum sociis natoque penatibus et magnis dis parturient
-                        montes
-                    </p>
+                <section class="selectedMenu--wrap">
+                    <div class="container">
+                        <div class="selectedMenu">
+                            <p class="selectedMenu__tag">CHEF'S RECOMMENDED</p>
+                            <h2 class="selectedMenu__heading">
+                                Selected Menus
+                            </h2>
+                            <p class="selectedMenu__desc">
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit. Aenean commodo ligula eget
+                                dolor. Aenean massa. Cum sociis natoque
+                                penatibus et magnis dis parturient montes
+                            </p>
+                        </div>
+                    </div>
                 </section>
                 <section class="typeMenu">
                     <div class="container typeMenu--option">
@@ -160,7 +181,9 @@
                             </div>
                         </div>
                         <div class="typeMenu__food">
-                            <h2 class="typeMenu__food--tag">STARTERS</h2>
+                            <div class="typeMenu__food--tag__wrap">
+                                <h2 class="typeMenu__food--tag">STARTERS</h2>
+                            </div>
                             <ul class="typeMenu__food--list">
                                 <li class="typeMenu__food--item">
                                     <div class="typeMenu__food--item__title">
@@ -225,7 +248,9 @@
                             </div>
                         </div>
                         <div class="typeMenu__food">
-                            <h2 class="typeMenu__food--tag">BEVERAGES</h2>
+                            <div class="typeMenu__food--tag__wrap">
+                                <h2 class="typeMenu__food--tag">BEVERAGES</h2>
+                            </div>
                             <ul class="typeMenu__food--list">
                                 <li class="typeMenu__food--item">
                                     <div class="typeMenu__food--item__title">
@@ -293,7 +318,11 @@
                             </div>
                         </a>
                         <div class="typeMenu__food">
-                            <h2 class="typeMenu__food--tag">main courses</h2>
+                            <div class="typeMenu__food--tag__wrap">
+                                <h2 class="typeMenu__food--tag">
+                                    main courses
+                                </h2>
+                            </div>
                             <ul class="typeMenu__food--list">
                                 <li class="typeMenu__food--item">
                                     <div class="typeMenu__food--item__title">
@@ -481,7 +510,9 @@
                         <a href="#!" class="orderTimer__box--link"></a>
                     </div>
                 </section>
-                <section class="footer">
+
+                <!-- footer -->
+                <footer class="footer">
                     <div class="container-max">
                         <div class="footer__box">
                             <div class="footer__box--social">
@@ -578,11 +609,35 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </footer>
             </main>
-
-            <!-- footer -->
-            <footer></footer>
         </div>
+        <script>
+            const toggle = document.querySelector('#toggle');
+            const containerMenu = document.querySelector('#box-menu');
+            const btnClose = document.querySelector('#btn-close');
+            const overlay = document.querySelector('.overlay');
+
+            if (toggle) {
+                toggle.onclick = () => {
+                    containerMenu.style.transform = ' translateX(0)';
+                    overlay.style.display = 'block';
+                };
+            }
+
+            if (btnClose) {
+                btnClose.onclick = () => {
+                    containerMenu.style.transform = ' translateX(100%)';
+                    overlay.style.display = 'none';
+                };
+            }
+
+            if (overlay) {
+                overlay.onclick = () => {
+                    containerMenu.style.transform = ' translateX(100%)';
+                    overlay.style.display = 'none';
+                };
+            }
+        </script>
     </body>
 </html>

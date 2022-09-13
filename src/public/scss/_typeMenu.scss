@@ -63,7 +63,7 @@
                 cursor: pointer;
                 padding: 40px;
                 gap: 10px 0;
-                z-index: 2;
+                z-index: 1;
 
                 h4 {
                     font-size: 13px;
@@ -224,6 +224,41 @@
                 margin: 5px 0px 0px;
                 opacity: 0.6;
                 font-size: 16px;
+            }
+        }
+    }
+
+    // Tablet
+    @media (max-width: 1023px) {
+        .typeMenu--option {
+            gap: 60px 0;
+            flex-direction: column !important;
+            align-items: center;
+        }
+
+        &__food {
+            max-width: 494px;
+            width: 100%;
+            margin: auto 0;
+
+            &--tag {
+                &__wrap {
+                    text-align: center;
+                }
+            }
+        }
+
+        &.img-1 {
+            .typeMenu__poster {
+                width: 100%;
+
+                &:hover {
+                    .typeMenu__poster--img__1 {
+                        img {
+                            transform: none;
+                        }
+                    }
+                }
             }
         }
     }
