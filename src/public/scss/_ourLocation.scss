@@ -1,0 +1,53 @@
+.ourLocation--wrapper {
+    margin: 100px 0;
+    .ourLocation {
+        text-align: center;
+
+        &__list {
+            list-style: none;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            gap: 0 20px;
+            margin-top: 50px;
+        }
+
+        &__item {
+            &--title {
+                display: inline-block;
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: 1.2px;
+                line-height: 39.84px;
+                text-transform: uppercase;
+            }
+
+            &--address {
+                color: #e6e6e6;
+                font-size: 16px;
+                line-height: 26.56px;
+                margin: 20px 0;
+
+                a {
+                    transition: all 0.5s ease;
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: $primary-color;
+                }
+            }
+
+            &--link {
+                a {
+                    margin-right: 0;
+
+                    &::after {
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
