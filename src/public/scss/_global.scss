@@ -147,6 +147,10 @@ body {
     font-size: 16px;
     position: relative;
 
+    @media (max-width: 739px) {
+        font-size: 13px;
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -173,7 +177,21 @@ body {
 .heading {
     font-size: 74px;
     font-weight: 600;
-    line-height: 74px;
+    line-height: 1;
     font-family: $heading-font;
     margin-bottom: 20px;
+
+    @media (max-width: 1023px) {
+        font-size: 48px;
+    }
+
+    @media (max-width: 739px) {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .none-tablet {
+        display: none;
+    }
 }
