@@ -2,13 +2,15 @@
     margin: 100px 0;
     .ourLocation {
         text-align: center;
+        overflow: hidden;
+        padding-bottom: 5px;
 
         &__list {
+            $number-column: 4;
             list-style: none;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            gap: 0 20px;
+            display: grid;
+            grid-template-columns: repeat($number-column, 1fr);
+            gap: 60px 20px;
             margin-top: 50px;
         }
 
@@ -49,5 +51,22 @@
                 }
             }
         }
+
+        @media (max-width: 1023px) {
+            &__list {
+                $number-column: 2;
+                grid-template-columns: repeat($number-column, 1fr);
+            }
+        }
+
+        @media (max-width: 739px) {
+            &__list {
+                $number-column: 1;
+                grid-template-columns: repeat($number-column, 1fr);
+            }
+        }
+    }
+    @media (max-width: 739px) {
+        margin-top: 60px;
     }
 }
