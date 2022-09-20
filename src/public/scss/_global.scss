@@ -130,6 +130,12 @@ body {
     flex-direction: row-reverse;
 }
 
+.reverse--column {
+    @media (max-width: 1023px) {
+        flex-direction: column-reverse !important;
+    }
+}
+
 .flex-row {
     flex-direction: row;
     width: 100%;
@@ -210,4 +216,49 @@ body {
     .none-tablet {
         display: none;
     }
+}
+
+.fz-50px {
+    font-size: 50px !important;
+
+    @media (max-width: 739px) {
+        font-size: 38px !important;
+    }
+}
+
+.pd-50px {
+    padding: 50px 0;
+}
+
+.hv-primary {
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.flex-sp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.global--link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all ease 0.3s;
+
+    i {
+        min-width: 20px;
+    }
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.mb-15 {
+    margin-bottom: 15px;
 }

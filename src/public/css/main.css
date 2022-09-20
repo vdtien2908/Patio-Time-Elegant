@@ -160,6 +160,12 @@ body {
   flex-direction: row-reverse;
 }
 
+@media (max-width: 1023px) {
+  .reverse--column {
+    flex-direction: column-reverse !important;
+  }
+}
+
 .flex-row {
   flex-direction: row;
   width: 100%;
@@ -238,6 +244,49 @@ body {
     display: none;
   }
 }
+.fz-50px {
+  font-size: 50px !important;
+}
+@media (max-width: 739px) {
+  .fz-50px {
+    font-size: 38px !important;
+  }
+}
+
+.pd-50px {
+  padding: 50px 0;
+}
+
+.hv-primary {
+  transition: all 0.3s ease;
+}
+.hv-primary:hover {
+  color: #dd5903;
+}
+
+.flex-sp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.global--link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: all ease 0.3s;
+}
+.global--link i {
+  min-width: 20px;
+}
+.global--link:hover {
+  color: #dd5903;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
 .header {
   background-image: url("../img/bg-header.jpg");
   background-color: #000;
@@ -1453,6 +1502,111 @@ body {
   }
   .posterLocation--wrapper .posterLocation__content--tag, .posterLocation--wrapper .posterLocation__content--text {
     font-size: 16px;
+  }
+}
+
+.contactTimer--wrapper {
+  padding: 100px 0;
+  background-color: rgba(161, 138, 123, 0.0509803922);
+}
+.contactTimer--wrapper .contactTimer__content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 1023px) {
+  .contactTimer--wrapper .contactTimer__content {
+    width: 100%;
+  }
+}
+.contactTimer--wrapper .contactTimer__content--tag {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  line-height: 29.88px;
+  text-transform: uppercase;
+  color: #dd5903;
+}
+.contactTimer--wrapper .contactTimer__content--title {
+  font-weight: 600;
+  line-height: 50px;
+  font-family: "Cormorant Garamond", sans-serif;
+}
+.contactTimer--wrapper .contactTimer__content--text {
+  color: #d3d3d3;
+  display: inline;
+  font-size: 18px;
+  line-height: 29.88px;
+}
+.contactTimer--wrapper .contactTimer__content--text b {
+  font-weight: 600;
+}
+.contactTimer--wrapper .contactTimer__content--text a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+.contactTimer--wrapper .contactTimer__content--text a:hover {
+  color: #dd5903;
+}
+
+.flow--wrapper {
+  background-image: url("../img/newsletter-bg-1.jpg");
+  background-size: cover;
+  position: relative;
+}
+.flow--wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #151318;
+  opacity: 0.5;
+}
+.flow--wrapper .flow {
+  padding: 100px 0;
+  text-align: center;
+}
+.flow--wrapper .flow__content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.flow--wrapper .flow__content--subTitle {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.9px;
+  line-height: 29.88px;
+  margin: 0px 0px 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.flow--wrapper .flow__content--title {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 50px;
+  margin: 0px 0px 30px;
+  text-align: center;
+  font-family: "Cormorant Garamond", sans-serif;
+}
+.flow--wrapper .flow__content--desc {
+  font-size: 16px;
+  line-height: 1.8;
+}
+@media (max-width: 739px) {
+  .flow--wrapper .flow__content {
+    padding: 10px;
+  }
+  .flow--wrapper .flow__content--subTitle {
+    font-size: 14px;
+  }
+  .flow--wrapper .flow__content--title {
+    font-size: 38px;
+    font-weight: 600;
   }
 }
 
