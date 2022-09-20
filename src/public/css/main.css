@@ -109,6 +109,9 @@ body {
   position: relative;
   padding: 12px 0;
 }
+.link__underline--hover.link__underline--hover--main::after {
+  background-color: #dd5903;
+}
 .link__underline--hover::after {
   content: "";
   position: absolute;
@@ -179,6 +182,12 @@ body {
   text-transform: uppercase;
   font-size: 16px;
   position: relative;
+}
+.global__tag.tag--no--line::after {
+  display: none;
+}
+.global__tag.tag--no--line::before {
+  display: none;
 }
 @media (max-width: 739px) {
   .global__tag {
@@ -1296,6 +1305,154 @@ body {
 @media (max-width: 739px) {
   .ourLocation--wrapper {
     margin-top: 60px;
+  }
+}
+
+.booking--wrapper .booking__content {
+  text-align: center;
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: #d3d3d3;
+}
+.booking--wrapper .booking__form {
+  height: 336px;
+}
+
+.posterLocation--wrapper {
+  margin-bottom: 100px;
+}
+.posterLocation--wrapper .posterLocation {
+  display: flex;
+  gap: 60px;
+  position: relative;
+}
+.posterLocation--wrapper .posterLocation__img {
+  display: flex;
+  gap: 10px;
+}
+.posterLocation--wrapper .posterLocation__img--child {
+  position: relative;
+}
+.posterLocation--wrapper .posterLocation__img--child:hover .posterLocation__img--child__banner img {
+  transform: scale(1.07);
+}
+.posterLocation--wrapper .posterLocation__img--child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #151318;
+  opacity: 0.3;
+  z-index: 1;
+}
+.posterLocation--wrapper .posterLocation__img--child__banner {
+  overflow: hidden;
+}
+.posterLocation--wrapper .posterLocation__img--child__banner img {
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.posterLocation--wrapper .posterLocation__img--child__content {
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+  transform: translateX(50%);
+  text-align: center;
+  z-index: 5;
+  width: 100%;
+  padding: 0 30px;
+}
+.posterLocation--wrapper .posterLocation__img--child__content.content--top {
+  top: 30px;
+}
+.posterLocation--wrapper .posterLocation__img--child__content--tag {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.posterLocation--wrapper .posterLocation__img--child__content--title {
+  text-transform: uppercase;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1;
+  font-family: "Cormorant Garamond", sans-serif;
+  margin: 12px 0;
+}
+.posterLocation--wrapper .posterLocation__img--child__content--link a {
+  margin-right: 0;
+}
+.posterLocation--wrapper .posterLocation__content {
+  max-width: 45%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.posterLocation--wrapper .posterLocation__content--tag {
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 26.56px;
+  text-transform: uppercase;
+  color: #dd5903;
+}
+.posterLocation--wrapper .posterLocation__content--title {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 50px;
+  font-family: "Cormorant Garamond", sans-serif;
+}
+.posterLocation--wrapper .posterLocation__content--text {
+  color: #d3d3d3;
+  font-size: 18px;
+  line-height: 29.88px;
+}
+.posterLocation--wrapper .posterLocation__content--text b {
+  font-weight: 600;
+}
+.posterLocation--wrapper .posterLocation__content--text i {
+  min-width: 20px;
+  font-size: 16px;
+}
+@media (max-width: 1023px) {
+  .posterLocation--wrapper {
+    margin-bottom: 60px;
+  }
+  .posterLocation--wrapper .posterLocation {
+    flex-direction: column;
+  }
+  .posterLocation--wrapper .posterLocation__content {
+    max-width: 100%;
+    gap: 15px 0;
+  }
+}
+@media (max-width: 739px) {
+  .posterLocation--wrapper {
+    margin-bottom: 60px;
+  }
+  .posterLocation--wrapper .posterLocation__img {
+    flex-direction: column;
+  }
+  .posterLocation--wrapper .posterLocation__img--child__content--tag {
+    font-size: 11px;
+  }
+  .posterLocation--wrapper .posterLocation__img--child__content--title {
+    font-size: 28px;
+  }
+  .posterLocation--wrapper .posterLocation__img--child__content--link a {
+    font-size: 11px;
+  }
+  .posterLocation--wrapper .posterLocation__content {
+    max-width: 100%;
+    gap: 15px 0;
+  }
+  .posterLocation--wrapper .posterLocation__content--title {
+    font-size: 32px;
+  }
+  .posterLocation--wrapper .posterLocation__content--tag, .posterLocation--wrapper .posterLocation__content--text {
+    font-size: 16px;
   }
 }
 
