@@ -2005,6 +2005,36 @@ body {
   justify-content: space-between;
   margin-bottom: 10px;
 }
+@media (max-width: 1023px) {
+  .detailNews--wrapper {
+    margin: 60px 0;
+  }
+  .detailNews--wrapper .detailNews {
+    flex-direction: column;
+  }
+  .detailNews--wrapper .detailNews__main {
+    width: 100%;
+  }
+  .detailNews--wrapper .detailNews__main--author {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detailNews--wrapper .detailNews__main--author--img {
+    width: 120px;
+  }
+  .detailNews--wrapper .detailNews__main--author--name {
+    text-align: center;
+  }
+  .detailNews--wrapper .detailNews__main--author--desc {
+    text-align: center;
+  }
+  .detailNews--wrapper .detailNews__main--author--link {
+    justify-content: center;
+  }
+  .detailNews--wrapper .detailNews__sidebar {
+    width: 100%;
+  }
+}
 
 .footer {
   border-style: solid;
